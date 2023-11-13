@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PryChestaTP2", "PryChestaTP2.csproj", "{FED52639-AD62-4362-8638-83251991852F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FED52639-AD62-4362-8638-83251991852F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FED52639-AD62-4362-8638-83251991852F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FED52639-AD62-4362-8638-83251991852F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FED52639-AD62-4362-8638-83251991852F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D1D1603-2EDC-4064-83FE-42149D60317E}
+	EndGlobalSection
+EndGlobal
