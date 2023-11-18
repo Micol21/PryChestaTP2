@@ -43,8 +43,14 @@ namespace PryChestaTP2
 
         private void btnFiltrarApellido_Click(object sender, EventArgs e)
         {
-            objAccesoBD.BuscarEmpleadoporapellido(txtApellido.Text, dgvEmpleados);
+            objAccesoBD.Buscarempleadoporapellido(txtApellido.Text, dgvEmpleados);
             txtApellido.Clear();
+        }
+
+        private void btnFiltrarBarrio_Click(object sender, EventArgs e)
+        {
+            objAccesoBD.BuscarEmpleadoporciudad(txtCiudad.Text, dgvEmpleados);
+            txtCiudad.Clear();
         }
     }
 }

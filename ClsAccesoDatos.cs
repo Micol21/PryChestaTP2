@@ -176,21 +176,95 @@ namespace PryChestaTP2
 
 
 
-                if (lectorBD.HasRows)
-                {
+                
+                
                     while (lectorBD.Read())
                     {
                         if (lectorBD[2].ToString() == apellido)
                         {
 
-                            grilla.Rows.Clear();
+                           
                             grilla.Rows.Add(lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
                         }
 
                     }
 
 
+                
+            }
+            catch (Exception error)
+            {
+                estadoConexion = "Error:" + error.Message;
+            }
+        }
+
+
+        public void Buscarempleadoporapellido(string apellido, DataGridView grilla)
+        {
+            try
+            {
+                ConectarBD();
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "DATOS PERSONALES ";
+
+                lectorBD = comandoBD.ExecuteReader();
+
+
+
+
+
+                while (lectorBD.Read())
+                {
+                    if (lectorBD[2].ToString() == apellido)
+                    {
+
+
+                        grilla.Rows.Add(lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
+                    }
+
                 }
+
+
+
+            }
+            catch (Exception error)
+            {
+                estadoConexion = "Error:" + error.Message;
+            }
+        }
+        public void BuscarEmpleadoporciudad(string ciudad, DataGridView grilla)
+        {
+            try
+            {
+                ConectarBD();
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "DATOS PERSONALES";
+
+                lectorBD = comandoBD.ExecuteReader();
+
+
+
+
+
+                while (lectorBD.Read())
+                {
+                    if (lectorBD[4].ToString() == ciudad)
+                    {
+
+
+                        grilla.Rows.Add(lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
+                    }
+
+                }
+
+
+
             }
             catch (Exception error)
             {
